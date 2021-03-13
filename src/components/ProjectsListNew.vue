@@ -1,5 +1,8 @@
 <template>
+  <!-- ref为一个元素或者子组件的一个引用-->
+
   <el-table
+
       ref="multipleTable"
       @selection-change="handleSelectChange"
       class="project_list_new"

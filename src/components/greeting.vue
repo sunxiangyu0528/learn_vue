@@ -14,7 +14,7 @@
     <p v-if="age>50">{{ username }}想去网吧上网1</p>
     <!--    <p v-else-if="age==20">{{ username }}想去网吧上网2</p>-->
     <!--    <p v-else>{{ username }}想去网吧上网3</p>-->
-
+  <hello_world></hello_world>
   </div>
 </template>
 
@@ -35,6 +35,13 @@ export default {
     chageusername: function () {
       this.username = '你好像一条狗啊'
     }
+  }, created() {
+    console.log('实例创建之后，能够获取到this')
+    console.log("username为", this.username)
+
+  },
+  mounted() {
+    console.log("biubiubiub")
   }
 }
 </script>
