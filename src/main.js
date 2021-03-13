@@ -6,11 +6,16 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 // 在创建vue实例之前，要讲element-ui之前加入到vue中
 
+import router from "@/router";
+
+
+
 //声明全局组件
 Vue.component('hello_world', HelloWorld)
 Vue.use(ElementUI)
 Vue.config.productionTip = false
 
 new Vue({
+    router,
     render: h => h(App),
 }).$mount('#app')

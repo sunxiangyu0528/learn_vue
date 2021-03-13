@@ -1,33 +1,48 @@
 <!--template展示给前端用户的，相当于mvvm模式的v-->
 <template>
   <div id="app">
-<!--    <img alt="Vue logo" src="./assets/logo.png">-->
-    <!--    <HelloWorld msg="sunxy666"/>-->
-        <greeting ></greeting>
-    <!--    <ProjectList></ProjectList>-->
-    <!--    <ProjectsListNew></ProjectsListNew>-->
-<!--    <login></login>-->
-    <LoginNew></LoginNew>
+    <!--    <img alt="Vue logo" src="./assets/logo.png">-->
+    <ul>
+      <li>
+        <router-link to="/loginNew">登陆2</router-link>
+      </li>
+      <li>
+        <router-link to="/greeting">欢迎</router-link>
+      </li>
+      <li>
+        <router-link to="/HelloWorld">主页</router-link>
+      </li>
+      <li>
+        <router-link to="/ProjectList">问候</router-link>
+      </li>
+      <li>
+        <router-link to="/ProjectsListNew">项目列表</router-link>
+      </li>
+      <li>
+        <router-link to="/Login">登陆1</router-link>
+      </li>
+    </ul>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 //导入子组件
-// import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld.vue'
 import greeting from "@/components/greeting";
-// import ProjectList from "@/components/ProjectList";
-// import ProjectsListNew from "@/components/ProjectsListNew";
-// import Login from "@/components/Login";
+import ProjectList from "@/components/ProjectList";
+import ProjectsListNew from "@/components/ProjectsListNew";
+import Login from "@/components/Login";
 import LoginNew from "@/components/LoginNew";
 //定义组件名称
 export default {
   name: 'App',
   components: { //声明子组件
-    // HelloWorld,
+    HelloWorld,
     greeting,
-    // ProjectList,
-    // ProjectsListNew,
-    // Login,
+    ProjectList,
+    ProjectsListNew,
+    Login,
     LoginNew
   }
 }
